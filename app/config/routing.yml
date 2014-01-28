@@ -1,0 +1,8 @@
+acme_propelexample:
+    resource: "@AcmePropelexampleBundle/Resources/config/routing.php"
+    prefix:   /
+
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.php"
+    prefix:   /
+
