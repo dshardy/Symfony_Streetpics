@@ -2,7 +2,7 @@
 
  <html>
     
-    <head>
+     <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Filmstrip{% endblock %}</title>
@@ -10,13 +10,7 @@
         
         
         {% block stylesheets %}
-{#
-          {% stylesheets 'Dsh/streetpicsBundle/css/streetpics.css' filter='cssrewrite' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-          {% endstylesheets %}
-#}
-        
-        <link href="{{ asset('bundles/dshstreetpicsbundle/css/streetpics.css') }}" rel="stylesheet" />        
+           <link href="{{ asset('dsh/streetpicsbundle/css/streetpics.css') }}" rel="stylesheet" />        
         {% endblock %} 
  
     
