@@ -1,23 +1,58 @@
 {% extends '::base.html.twig' %}
 
-
+    
+   
+   
+   
+   
+   {% block somerandomname %}
+      
+      {% include ('DshstreetpicsBundle:Default:Subfolder/Secondfolder/sub.html.twig') %}   	   
+      
+      <div> somerandomname block content from index.html.twig </div>       
+   
+   {% endblock %}
+   
+   
+   
    {% block dazfilmstrip %}
     
     {{ parent() }}
 
-    <link href="{{ asset('Dsh/streetpicsBundle/Resources/css/streetpics.css') }}" rel="stylesheet" />
+  
     
-	<div class="filmspace">
-	    <div class="film_strip">
-	        <img class="photosinstylesheet" src= <img src="../../public/images/babyface.gif" alt="babyface" width="263" height="176" />
-	       
-	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+          {#
+          {% block stylesheets %}
+             {% stylesheets 'Dsh/streetpicsBundle/public/css/streetpics.css' filter='cssrewrite' %}
+                 <link rel="stylesheet" href="{{ asset_url }}" />
+             {% endstylesheets %}
+          {% endblock %}
+          #}
+          
+          
+        
+		   {% image '@DshstreetpicsBundle/Resources/public/images/babyface.gif' %}
+		         <img src="{{ asset_url }}" alt="Example" />
+		    
+				    <div class="filmspace">
+					    <div class="film_strip">
+					        <img class="photosinstylesheet" src= <img src="../../public/images/babyface.gif" alt="babyface" width="263" height="176" />
+					       
+					        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+					        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+					        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+					        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+					
+					    </div>
+					</div>    
+      {% endimage %}   
+        
+    
 	
-	    </div>
-	</div>
+	
+	
+	<h1 class="body"> dazfilmstrip block content from index.html.twig </h1>
+	
 	
     {% endblock %}
 

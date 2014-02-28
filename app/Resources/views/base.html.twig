@@ -8,10 +8,17 @@
         <title>{% block title %}Filmstrip{% endblock %}</title>
         
         
+        
         {% block stylesheets %}
-            <link href="{{ asset('/css/main.css') }}" rel="stylesheet" />
-        {% endblock %}
-    
+{#
+          {% stylesheets 'Dsh/streetpicsBundle/css/streetpics.css' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+          {% endstylesheets %}
+#}
+        
+        <link href="{{ asset('bundles/dshstreetpicsbundle/css/streetpics.css') }}" rel="stylesheet" />        
+        {% endblock %} 
+ 
     
     </head>
     
@@ -19,8 +26,11 @@
     <body>
 
         <div>
-        {% block dazfilmstrip%}
-        {% endblock %}
+	        {% block dazfilmstrip %}
+	        
+	        <h1 class = "body">dazfilmstrip_block in base html</h1>
+	        
+	        {% endblock %}
         </div>
         
         <div id="sidebar">
