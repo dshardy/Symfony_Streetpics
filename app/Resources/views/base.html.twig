@@ -3,10 +3,9 @@
  <html>
     
     <head>
-        {# ... #}
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Test Application{% endblock %}</title>
+        <title>{% block title %}Filmstrip{% endblock %}</title>
         
         
         {% block stylesheets %}
@@ -18,9 +17,11 @@
     
     
     <body>
-        {# ... #}
 
-        
+        <div>
+        {% block dazfilmstrip%}
+        {% endblock %}
+        </div>
         
         <div id="sidebar">
             {% block sidebar %}
