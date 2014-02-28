@@ -11,7 +11,7 @@
                
                {% block stylesheets %}{% endblock %}
                
-               <link href="{{ asset('css/streetpics.css') }}" rel="stylesheet" />        
+               <link href="{{ asset('bundles/dshstreetpics/css/mystyle.css') }}" rel="stylesheet" />        
              
     
     
@@ -20,8 +20,7 @@
     
     <body>
      
-        
-        
+             
         
         <div>
 	        {% block dazfilmstrip %}
@@ -62,7 +61,7 @@
         
         {% block javascripts %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-            <script src="{{ asset('/js/index.js') }}"></script>
+            <script src="{{ asset('bundles/dshstreetpics/js/index.js') }}"></script>
         {% endblock %}
         
     
