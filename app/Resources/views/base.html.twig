@@ -4,21 +4,25 @@
     
      <head>
         
+        
+        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Filmstrip{% endblock %}</title>
-        
-        
-        
-        {% block stylesheets %}
-           <link href="{{ asset('dsh/streetpicsbundle/css/streetpics.css') }}" rel="stylesheet" />        
-        {% endblock %} 
- 
+               
+               {% block stylesheets %}{% endblock %}
+               
+               <link href="{{ asset('css/streetpics.css') }}" rel="stylesheet" />        
+             
+    
     
     </head>
     
     
     <body>
-
+     
+        
+        
+        
         <div>
 	        {% block dazfilmstrip %}
 	        
@@ -26,6 +30,11 @@
 	        
 	        {% endblock %}
         </div>
+        
+        
+        
+        
+        
         
         <div id="sidebar">
             {% block sidebar %}
@@ -35,15 +44,30 @@
                 </ul>
             {% endblock %}
         </div>
-
+        
+        
+        
+        
+        
+        
+        
         <div id="content">
             {% block body %}{% endblock %}
         </div>
         
+        
+        
+        
+        
+        
         {% block javascripts %}
-            <script src="{{ asset('/js/main.js') }}"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script src="{{ asset('/js/index.js') }}"></script>
         {% endblock %}
         
+    
+    
+    
     </body>
 
 </html>
