@@ -31,14 +31,12 @@ twig:
 
 # Assetic Configuration
 assetic:
+    debug:          "%kernel.debug%"
     use_controller: false
-    filters:
-        cssrewrite: ~
-    debug:          %kernel.debug%
+    bundles: [DshstreetpicsBundle]
     java: /usr/bin/java
     filters:
-        cssrewrite: ~     
-# Doctrine Configuration
+       cssrewrite: ~     
 doctrine:
     dbal:
         driver:   "%database_driver%"

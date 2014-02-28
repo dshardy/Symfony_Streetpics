@@ -1,13 +1,37 @@
-{% stylesheets 'Dsh/streetpicsBundle/Resources/public/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
-{% endstylesheets %}
+{% extends '::base.html.twig' %}
 
-<div class="filmspace">
-    <div class="film_strip">
-        <img class="photosinstylesheet" src="http://placehold.it/263x180" />
-        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
-    </div>
-</div>
+{#
+	{% stylesheets 'Dsh/streetpicsBundle/Resources/public/css/*' filter='cssrewrite' %}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+	{% endstylesheets %}
+#}
+	
+	{% block stylesheets %}
+    {{ parent() }}
+
+    <link href="{{ asset('Dsh/streetpicsBundle/Resources/css/streetpics.css') }}" rel="stylesheet" />
+    {% endblock %}
+	
+	
+	{% block display %}
+	
+	<div class="filmspace">
+	    <div class="film_strip">
+	        <img class="photosinstylesheet" src= <img src="../../public/images/babyface.gif" alt="babyface" width="263" height="176" />
+	       {#
+	 <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+	        <img class="photosinstylesheet" src="http://placehold.it/263x180" alt="" />
+	#}
+	    </div>
+	</div>
+	
+	{% endblock %}
+
+
+
+
+
+
+
