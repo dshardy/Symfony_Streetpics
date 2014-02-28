@@ -1,0 +1,7 @@
+parameters:
+#    dshstreetpics.example.class: Dsh\streetpicsBundle\Example
+
+services:
+#    dshstreetpics.example:
+#        class: %dshstreetpics.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

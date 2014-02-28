@@ -1,0 +1,8 @@
+dshstreetpics:
+    resource: "@DshstreetpicsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
+
+

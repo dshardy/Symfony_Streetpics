@@ -1,0 +1,3 @@
+dshstreetpics_homepage:
+    pattern:  /photos/{name}
+    defaults: { _controller: DshstreetpicsBundle:Default:index }

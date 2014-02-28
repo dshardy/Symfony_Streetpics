@@ -1,13 +1,55 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html>  
+
+ <html>
+    
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Filmstrip{% endblock %}</title>
+        
+        
+        
+        {% block stylesheets %}
+{#
+          {% stylesheets 'Dsh/streetpicsBundle/css/streetpics.css' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+          {% endstylesheets %}
+#}
+        
+        <link href="{{ asset('bundles/dshstreetpicsbundle/css/streetpics.css') }}" rel="stylesheet" />        
+        {% endblock %} 
+ 
+    
     </head>
+    
+    
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <div>
+	        {% block dazfilmstrip %}
+	        
+	        <h1 class = "body">dazfilmstrip_block in base html</h1>
+	        
+	        {% endblock %}
+        </div>
+        
+        <div id="sidebar">
+            {% block sidebar %}
+                <ul>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                </ul>
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        
+        {% block javascripts %}
+            <script src="{{ asset('/js/main.js') }}"></script>
+        {% endblock %}
+        
     </body>
+
 </html>
