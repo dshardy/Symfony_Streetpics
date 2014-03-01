@@ -9,11 +9,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Filmstrip{% endblock %}</title>
                
-               {% block stylesheets %}{% endblock %}
+{#
+               {% block stylesheets %}
                
-               <link href="{{ asset('bundles/dshstreetpics/css/mystyle.css') }}" rel="stylesheet" />        
-             
-    
+                  <link href="{{ asset('bundles/dshstreetpics/css/main.css') }}" rel="stylesheet" />
+                         
+               {% endblock %}
+#}
+               
+               
+               {% block stylesheets %}
+               {% stylesheets 'bundles/dshstreetpics/css/*' filter='cssrewrite' %}
+                   <link rel="stylesheet" href="{{ asset_url }}" />
+               {% endstylesheets %}
+               {% endblock %}
     
     </head>
     
@@ -25,7 +34,7 @@
         <div>
 	        {% block dazfilmstrip %}
 	        
-	        <h1 class = "body">dazfilmstrip_block in base html</h1>
+	           <h1 class = "body">dazfilmstrip_block in base html</h1>
 	        
 	        {% endblock %}
         </div>
