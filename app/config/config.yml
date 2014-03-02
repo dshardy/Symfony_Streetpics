@@ -36,7 +36,7 @@ assetic:
     bundles: [DshstreetpicsBundle]
     java: /usr/bin/java
     filters:
-       cssrewrite: ~     
+       cssrewrite: ~   
 doctrine:
     dbal:
         driver:   "%database_driver%"

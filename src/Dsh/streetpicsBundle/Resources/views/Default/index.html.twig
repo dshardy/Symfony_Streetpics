@@ -4,80 +4,22 @@
           {% stylesheets 'bundles/dshstreetpics/css/streetpics.css' filter='cssrewrite' %}      
              <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
           {% endstylesheets %}
-     {#  {% endblock %}  #} 
-    
-    
-    
-{#
-   
-     {% block stylesheets %}
-     {{ parent() }}
-          <link href="{{ asset('bundles/dshstreetpics/css/streetpics.css') }}" rel="stylesheet" />
-     {% endblock %} 
-    
-#}
-     
-          
-  {#    {% block dazfilmstrip %} #}
-          {#  <link href="{{ asset('bundles/dshstreetpics/css/streetpics.css') }}" rel="stylesheet" /> #}
-	 
-	   	         
 	    		    <div class="filmspace">
 					    <div class="film_strip">
-					        
-					  {#   {% image '@DshstreetpicsBundle/Resources/public/images/*.jpg' %}     #}
-					{#    {%image%} #}
-					        
-					        <img class="photosinstylesheet" src="{{ asset('images/babyface.gif') }}" alt="babyface" />					  
-					        <img class="photosinstylesheet" src="{{ asset('@DshstreetpicsBundle/Resources/public/images/daisybaby.gif') }}" alt="books" width="263" height="176"/>
-					        <img class="photosinstylesheet" src= "../images/buddha.gif" alt="babyface" width="263" height="176"/>
-					        <img class="photosinstylesheet" src="<img src="../../public/images/zachlookpops.gif" alt="zachlookpops" width="394" height="263" />" alt="babyface" width="263" height="176"/>
-					        
-					        
-					        
-					        <img class="photosinstylesheet" src="{{ asset('<img src="../../public/images/fairswings.gif" alt="fairswings" width="263" height="176" />') }}" alt="babyface" width="263" height="176"/>
-					        <img class="photosinstylesheet" src="<img src="../../public/images/books.gif" alt="books" width="263" height="176" />" alt="babyface" width="263" height="176"/>
-					        <img class="photosinstylesheet" src="<img src="~/Sites/Symfony/Symfony_Streetpics/Src/Resources/public/images/rainbow.gif" alt="rainbow" width="263" height="176" />" alt="babyface" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/babyface.gif') }}" alt="babyface" />				  
+					        <img class="photosinstylesheet" src="{{ asset('images/daisybaby.gif') }}" alt="books" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/buddha.gif') }}" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/zachlookpops.gif') }}" alt="zachlookpops" width="394" height="263" />" alt="babyface" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/fairswings.gif') }}" alt="fairswings" width="263" height="176" />') }}" alt="babyface" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/books.gif') }}" alt="books" width="263" height="176" />" alt="babyface" width="263" height="176"/>
+					        <img class="photosinstylesheet" src="{{ asset('images/lowsunriver.gif') }}" alt="rainbow" width="263" height="176" />" alt="babyface" width="263" height="176"/>
 					        <img class="photosinstylesheet" src="{{ asset('images/rainbow.gif') }}" alt="babyface" width="263" height="176"/>
 					        <img class="photosinstylesheet" src="{{ asset('images/zachlookpops.gif') }}" alt="babyface" width="263" height="176"/>
-					    
-					  {#   {% endimage %} #}
-					    
-					    
 					    </div>					    
 					</div>
 					
 	  
 	  {% endblock %}
-	  
 
-	
-
-
-  
-
-			
-					
-        
-
-					    
-{#
-           {% block filmstrip %}            
-	            {% image '@DshstreetpicsBundle/Resources/public/images/filmstrip.gif' %}
-	                   <img src="{{ asset_url }}" alt="Example" />
-	            {% endimage %}            
-           {% endblock %}  
-#}      
-       
-    
-    
-{#
-      {% block somerandomname %}
-           {% include ('DshstreetpicsBundle:Default:Subfolder/Secondfolder/sub.html.twig') %}   	   
-           <div> somerandomname block content from index.html.twig </div>       
-      {% endblock %}
-#}
-       
-{#        <img class="photosinstylesheet" src="{{ asset('images/zachlookpops.gif') }}" alt="babyface" width="263" height="176"/>      #}
 
 
