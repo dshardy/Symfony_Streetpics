@@ -1,5 +1,5 @@
 body{
-background:#f8fd99;
+background:#f8fd97;
 font-family: Verdana, Helvetica, sans-serif;
 color:blue;
 }
@@ -26,7 +26,6 @@ animation: filmstrip_roll linear 12s infinite;
 }
 
 .film_strip:after {
-    background-color: teal;
     background-image: url("../images/filmstrip.gif"); /* Film strip image url */
     background-repeat: repeat-x;
     content: "";    /* You need to specify (empty) content or else the element will not show */
