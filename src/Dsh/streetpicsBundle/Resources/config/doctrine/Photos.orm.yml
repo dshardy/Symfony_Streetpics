@@ -1,0 +1,25 @@
+Dsh\streetpicsBundle\Entity\Photos:
+    type: entity
+    table: null
+    repositoryClass: Dsh\streetpicsBundle\Entity\PhotosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        photofile:
+            type: blob
+        dateshot:
+            type: datetimetz
+        locationshot:
+            type: string
+            length: '255'
+        eventshot:
+            type: string
+            length: '255'
+        photographer:
+            type: string
+            length: '255'
+    lifecycleCallbacks: {  }
