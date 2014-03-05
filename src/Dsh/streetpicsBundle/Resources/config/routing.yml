@@ -3,5 +3,5 @@ dshstreetpics_homepage:
     defaults: { _controller: DshstreetpicsBundle:Default:index }
 
 _photo:
-    pattern: /Photo
-    defaults: { _controller: DshstreetpicsBundle:Photofile:Photo }
+    pattern: /photo/{photofile}
+    defaults: { _controller: DshstreetpicsBundle:Photofile:photoshow }
