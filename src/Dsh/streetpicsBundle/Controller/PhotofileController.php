@@ -8,9 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class PhotofileController extends Controller
 	
-/*
 	{
-	    public function PhotostoreAction()
+	    /*
+public function PhotostoreAction()
 	    {
 	    $photo = new Photofile();
 	    $photo->setPhotofile('A Foo Bar');
@@ -25,27 +25,64 @@ class PhotofileController extends Controller
 	    
 	    
 	    }
-*/
+
 	
 	
 	
 	
 	{
-	    public function PhotoshowAction($photofile)
+	    public function PhotoshowAction($photos)
 	
 	   {   
 	    
+
 	    $displayphotofile = $this->renderView(
         'DshstreetpicsBundle:Photofile:Photo.html.twig',
          array('photofile' => $photofile)
          );
 
-         return new Response($displayphotofile);
+         
+         
+         $displayphotofile = $this->getDoctrine()
+        ->getRepository('DshstreetpicsBundle:Photofile:Photo.html.twig')
+        ->find($id);         
+         
+         return new Response($displayphotofile);        
+         
+       }
+*/
+
+
+       public function uploadAction()
+       
+       {
+    
+    
+
+	    $form = $this->createFormBuilder($document)
+	        ->add('name')
+	        ->add('file')
+	        ->getForm();
+
+  
+       
+       
        }
 
 
+
+
+
+
+
+
    }
+   
+   
+   
+   
 	    
+
 
 
     
