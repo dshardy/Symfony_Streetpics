@@ -1,0 +1,5 @@
+Dsh\streetpicsBundle\Entity\PhotoUploader:
+    properties:
+        file:
+            - File:
+                maxSize: 6000000

@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Photouploader
 {
@@ -58,3 +59,6 @@ class Photouploader
         return 'uploads/photouploads';
     }
 }
+
+
+
